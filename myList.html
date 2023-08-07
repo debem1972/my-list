@@ -14,7 +14,22 @@
 </head>
 
 <body>
-
+    <main class="container">
+        <section class="content">
+            <header>
+                <h1>Anotações</h1>
+            </header>
+            <input type="text" id="entrada" placeholder="Digite aqui!">
+            <section class="botoes">
+                <button id="escrever" onclick="anota()">Anotar</button>
+                <button id="salvar" onclick="salva()">Salvar</button>
+                <button id="buscar" onclick="busca()"> Busca Lista</button>
+            </section>
+            <section class="folha">
+                <ul id="lista"></ul>
+            </section>
+        </section>
+    </main>
 
     <script src="./js/index.js"></script>
 </body>
