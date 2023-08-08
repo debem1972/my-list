@@ -33,3 +33,10 @@ function busca() {
     const meusDados = localStorage.getItem('meusDados');
     document.querySelector('#lista').innerHTML = meusDados;
 }
+
+//--------------*---------------------*----------------------------------*
+//Efeito de som escrever ao clicar no botão anotar
+
+const anotando = new Audio();
+anotando.src = "./sound/escrevendo.mp3";
+

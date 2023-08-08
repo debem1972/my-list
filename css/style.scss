@@ -27,18 +27,19 @@
 }
 
 body {
-    background-image: url(../img/folhaBack1.jpeg);
+    background-image: url(../img/folhaBack.jpeg);
     background-size: cover;
     border-radius: 8px;
     padding: 4px;
+    overflow: auto;
 }
 
 .container {
     /*border: 1px solid $bordaMain;*/
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -51,8 +52,6 @@ body {
     font-family: "escribe";
     font-style: normal;
     font-weight: bold;
-    /*background-image: url(../img/folhaBack1.jpeg);
-    background-size: cover;*/
     box-shadow: 2px 8px 6px $terra;
     margin: 0 auto;
     margin-bottom: none;
@@ -83,13 +82,39 @@ body {
         height: 30px;
         border-radius: 5px;
         margin-left: 5px;
-        box-shadow: 2px 2px 3px $preto;
+        /*box-shadow: 2px 2px 3px $preto;*/
+        outline: none;
         font-size: 15px;
-        background-color: $rato;
+        background-color: $terra;
         color: $nuvem;
         cursor: pointer;
+        transition: transform .3s, box-shadow .2s;
+    }
+
+    #escrever:hover {
+        transform: translateY(3px);
+        box-shadow: 0 5px 10px $buttonShadowUp;
+
+        #escrever:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 7px $buttonShadowDown;
+        }
+
+    }
+
+    #salvar:hover {
+        transform: translateY(3px);
+        box-shadow: 0 5px 10px $buttonShadowUp;
+    }
+
+    #buscar:hover {
+        transform: translateY(3px);
+        box-shadow: 0 5px 10px $buttonShadowUp;
     }
 }
+
+
+
 
 .folha {
     /*border: 1px solid $preto;*/

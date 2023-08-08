@@ -20,18 +20,19 @@
 }
 
 body {
-  background-image: url(../img/folhaBack1.jpeg);
+  background-image: url(../img/folhaBack.jpeg);
   background-size: cover;
   border-radius: 8px;
   padding: 4px;
+  overflow: auto;
 }
 
 .container {
   /*border: 1px solid $bordaMain;*/
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content {
@@ -42,8 +43,6 @@ body {
   font-family: "escribe";
   font-style: normal;
   font-weight: bold;
-  /*background-image: url(../img/folhaBack1.jpeg);
-  background-size: cover;*/
   box-shadow: 2px 8px 6px brown;
   margin: 0 auto;
   margin-bottom: none;
@@ -74,11 +73,29 @@ body {
   height: 30px;
   border-radius: 5px;
   margin-left: 5px;
-  box-shadow: 2px 2px 3px black;
+  /*box-shadow: 2px 2px 3px $preto;*/
+  outline: none;
   font-size: 15px;
-  background-color: grey;
+  background-color: brown;
   color: white;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.2s;
+}
+.botoes #escrever:hover {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.botoes #escrever:hover #escrever:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+.botoes #salvar:hover {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.botoes #buscar:hover {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .folha {
