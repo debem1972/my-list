@@ -80,37 +80,34 @@ body {
     #buscar {
         width: 87px;
         height: 30px;
-        border-radius: 5px;
         margin-left: 5px;
-        /*box-shadow: 2px 2px 3px $preto;*/
-        outline: none;
+        /*outline: none;*/
         font-size: 15px;
-        background-color: $terra;
-        color: $nuvem;
         cursor: pointer;
         transition: transform .3s, box-shadow .2s;
     }
 
-    #escrever:hover {
-        transform: translateY(3px);
-        box-shadow: 0 5px 10px $buttonShadowUp;
-
-        #escrever:active {
-            transform: translateY(2px);
-            box-shadow: 0 2px 7px $buttonShadowDown;
-        }
-
+    .btnGreen {
+        background-color: $folha;
+        color: $nuvem;
+        box-shadow: 0 5px 0 $shadowButton;
+        border-radius: 5px;
     }
 
-    #salvar:hover {
-        transform: translateY(3px);
-        box-shadow: 0 5px 10px $buttonShadowUp;
+    .btnGreen:hover {
+        background-color: $shadowButton;
+        color: $nuvem;
+        box-shadow: 0 5px 0 $shadowButtonDown;
     }
 
-    #buscar:hover {
-        transform: translateY(3px);
-        box-shadow: 0 5px 10px $buttonShadowUp;
+    .btnGreen:active {
+        position: relative;
+        top: 5px;
+        box-shadow: 0 0 0 $shadowButtonDown, inset 3px 3px 3px$shadowButtonDown;
     }
+
+
+
 }
 
 

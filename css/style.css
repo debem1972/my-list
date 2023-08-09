@@ -71,31 +71,27 @@ body {
 .botoes #buscar {
   width: 87px;
   height: 30px;
-  border-radius: 5px;
   margin-left: 5px;
-  /*box-shadow: 2px 2px 3px $preto;*/
-  outline: none;
+  /*outline: none;*/
   font-size: 15px;
-  background-color: brown;
-  color: white;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.2s;
 }
-.botoes #escrever:hover {
-  transform: translateY(3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+.botoes .btnGreen {
+  background-color: green;
+  color: #fff;
+  box-shadow: 0 5px 0 #006000;
+  border-radius: 5px;
 }
-.botoes #escrever:hover #escrever:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+.botoes .btnGreen:hover {
+  background-color: #006000;
+  color: #fff;
+  box-shadow: 0 5px 0 #003f00;
 }
-.botoes #salvar:hover {
-  transform: translateY(3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-.botoes #buscar:hover {
-  transform: translateY(3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+.botoes .btnGreen:active {
+  position: relative;
+  top: 5px;
+  box-shadow: 0 0 0 #003f00, inset 3px 3px 3px #003f00;
 }
 
 .folha {
