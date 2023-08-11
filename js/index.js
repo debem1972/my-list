@@ -1,84 +1,64 @@
-/*function anota() {
-    let text = document.getElementById('entrada').value;  //Recebe os dados digitados no input
-    let listaDeDados = document.getElementById('lista').innerHTML; //Recebe os dados carregados na ul/li*/
-
-
-
-//Verifica se o input está vazio. Se sim, emite aviso, se não, envia para o id lista o conteúdo da variável listaDeDados
-
-/*if (document.querySelector('#entrada').value == "") {   
-    window.alert("Escreva algo!");
-} else {
-    listaDeDados += '<li>' + text + '</li>';  //Concatena cada tag li de abertura e fechamento ao conteúdo digitado no input e salvo na variável text
-    document.getElementById('lista').innerHTML = listaDeDados;
-
-}
-
-document.getElementById('entrada').value = "";  //Limpa o campo do input após a function anota
-
-}*/
-
 //-----------------*--------------*-------------------*--------------*----
 //Capturando os dados do input e lançando em uma lista
 
-const input = document.getElementById('entrada');
+const input = document.getElementById('entrada'); //A variável input, recebe os dados digitados no input id entrada
 
-const button = document.getElementById('escrever');
+const button = document.getElementById('escrever'); //A variável button seleciona o botão id escrever
 
+//É criado o evento click no botão id escrever. Quando clicado, dispara a função...
 button.addEventListener('click', function () {
-    const text = input.value;
+    const text = input.value;  //A variável text recebe o valor da variável input
+
+    //Se o valor da variável text for igual a vazio(se o campo input estiver vazio), emite o alerta, caso contrário, retornará o resto do código abaixo...
     if (text === "") {
-        alert("O campo não pode ser vazio.");
+        alert("Não há nada para se anotar...!!!");
         return;
     }
 
-    const list = document.getElementById("lista");
-    const li = document.createElement("li");
+    const list = document.getElementById("lista");  //A variável list seleciona a ul id lista
+    const li = document.createElement("li");  //A variável li cria o elemento li da ul
 
-    li.textContent = text;
-    list.appendChild(li);
+    li.textContent = text;  //A variável li, recebe o conteúdo da variável text
+    list.appendChild(li);  //São carregados os elementos li dentro da ul
 
+    //Limpa o campo input após escrever na lista
     input.value = "";
 
 
-    let audio1 = document.querySelector('#som1');
-    audio1.play();
+    const audio1 = document.querySelector('#som1');  //A variável audio1, seleciona o arquivo de audio  id som1
+    audio1.play();   //O arquivo de audio é executado
 });
 
 //-------------*--------------------*--------------------------------
 
 //Salva a lista no localStorage após clicar no botão salvar
-function salva() {
-    const meusDados = document.querySelector('#lista').innerHTML;
-    localStorage.setItem('meusDados', meusDados);
+
+
+const botao2 = document.querySelector('#salvar');  //A variável botao2 seleciona o botao id salvar
+
+botao2.addEventListener('click', function () {
+    const input = document.querySelector('#entrada');
+    const text = input.value;
+    const meusDados = document.querySelector('#lista').innerHTML;  //A variável meusDados seleciona os dados html da ul id lista
+
+    localStorage.setItem('meusDados', meusDados);  //Os dados da variável meusDados são salvos pelo método setItem no local Storage na chave 'meus Dados'
     window.alert('Sua lista foi salva!!!');
 
-}
+    const audio2 = document.querySelector('#som2');
+    audio2.play();
+});
+
+
+
 
 //-------------*-----------------------*------------------------------------
 
-//Busca a lista salva no localStorage pelo método getItem com a chave meusDados, e a envia para a ul id lista.
+//Busca a lista salva no localStorage pelo método getItem com a chave 'meusDados', e a envia para a ul id lista.
 function busca() {
     const meusDados = localStorage.getItem('meusDados');
     document.querySelector('#lista').innerHTML = meusDados;
-}
+};
 
-//--------------*---------------------*----------------------------------*
-//Efeito de som escrever ao clicar no botão anotar
 
-/*const botao1 = document.querySelector('#escrever'); //Seleciona o botão id escrever
 
-botao1.addEventListener('click', function () {  //Adiciona o evento click ao botão e cria uma function...
-
-    const audio1 = document.querySelector('#som1'); //Seleciona a tag de audio com o id som1
-
-    if (document.querySelector('#entrada').value == ""); {
-        window.alert('O campo não pode estar vazio!');
-        return;
-    }else {
-        audio1.play();   //Executa a variável audio1 com o método play
-
-    }
-
-});*/
 
