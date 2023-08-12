@@ -16,6 +16,7 @@
 
     .titulo {
         font-size: 2rem;
+        text-shadow: 1px 1px 2px $rato;
     }
 
 
@@ -32,34 +33,30 @@ body {
     /*background-image: url(../img/folhaBack.jpeg);
     background-size: cover;*/
     border-radius: 8px;
-    padding: 4px;
-    overflow: auto;
+    /*padding: 4px;*/
+    /*overflow: auto;*/
 }
 
 .container {
-    border: 1px solid $bordaMain;
+    /*border: 1px solid $bordaMain;*/
     display: flex;
-    justify-content: space-around;
-    border-radius: 10px;
-    background-image: url(../img/folhaBack.jpeg);
-    background-size: cover;
-    background-repeat: repeat;
-    margin: auto auto;
-    width: 93vw;
-    height: 100vh;
+    /*justify-content: space-around;*/
+    /*border-radius: 10px;*/
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
 
 
 
 .content {
-    border: none;
-    border-radius: 8px;
-    width: 100vw;
-    height: 100vh;
+    /*border: 3px solid $oceano;*/
+    background-color: rgb(230, 224, 224);
+    width: 100%;
+    /*height: 100%;*/
     font-family: "escribe";
     font-style: normal;
     font-weight: bold;
-    box-shadow: 2px 8px 6px $terra;
     margin: 0 auto;
     margin-bottom: none;
     text-align: center;
@@ -67,6 +64,7 @@ body {
 
 .titulo {
     margin-top: 20px;
+    font-size: 1.6rem;
 }
 
 #entrada {
@@ -74,7 +72,7 @@ body {
     margin-top: 30px;
     width: 275px;
     height: 40px;
-    box-shadow: 2px 2px 3px $preto;
+    box-shadow: 2px 2px 8px $preto;
     font-size: 18px;
 }
 
@@ -121,11 +119,19 @@ body {
 
 
 .folha {
-    /*border: 1px solid $preto;*/
-    padding: 10px;
-    margin-top: 30px;
-    width: 100%;
+    border: 3px solid $folha;
+    border-radius: 8px;
+    padding: 2px;
+    /*margin-top: 30px;*/
+    margin: 30px auto;
+    width: 92vw;
+    height: 100vh;
     text-align: justify;
+    background-image: url(../img/folhaBack.jpeg);
+    background-size: cover;
+    background-repeat: repeat;
+    overflow: auto;
+    box-shadow: 5px 5px 10px $preto;
 
     #lista {
         /*border: 1px solid $bordaMain;*/
