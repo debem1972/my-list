@@ -1,0 +1,30 @@
+.folha {
+    border: 3px solid $folha;
+    border-radius: 8px;
+    padding: 2px;
+    /*margin-top: 30px;*/
+    margin: 30px auto;
+    width: 92vw;
+    height: 100vh;
+    text-align: justify;
+    background-image: url(../img/folhaBack.jpeg);
+    background-size: cover;
+    background-repeat: repeat;
+    overflow: auto;
+    box-shadow: 5px 5px 10px $preto;
+
+    #lista {
+        /*border: 1px solid $bordaMain;*/
+        width: 100%;
+
+        li {
+            padding: 2px;
+            font-size: 1.6rem;
+            color: $ceu;
+            line-height: 35px;
+            margin-left: 30px;
+
+        }
+    }
+
+}

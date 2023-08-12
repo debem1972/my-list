@@ -19,8 +19,6 @@
         text-shadow: 1px 1px 2px $rato;
     }
 
-
-
 }
 
 * {
@@ -29,19 +27,11 @@
     box-sizing: border-box;
 }
 
-body {
-    /*background-image: url(../img/folhaBack.jpeg);
-    background-size: cover;*/
-    border-radius: 8px;
-    /*padding: 4px;*/
-    /*overflow: auto;*/
-}
+
 
 .container {
     /*border: 1px solid $bordaMain;*/
     display: flex;
-    /*justify-content: space-around;*/
-    /*border-radius: 10px;*/
     margin: 0 auto;
     width: 100%;
     height: 100%;
@@ -76,75 +66,7 @@ body {
     font-size: 18px;
 }
 
-.botoes {
-    /*border: 1px solid $preto;*/
-    margin-top: 20px;
-
-    #escrever,
-    #salvar,
-    #buscar {
-        width: 87px;
-        height: 30px;
-        margin-left: 5px;
-        /*outline: none;*/
-        font-size: 15px;
-        cursor: pointer;
-        transition: transform .3s, box-shadow .2s;
-    }
-
-    .btnGreen {
-        background-color: $folha;
-        color: $nuvem;
-        box-shadow: 0 5px 0 $shadowButton;
-        border-radius: 5px;
-    }
-
-    .btnGreen:hover {
-        background-color: $shadowButton;
-        color: $nuvem;
-        box-shadow: 0 5px 0 $shadowButtonDown;
-    }
-
-    .btnGreen:active {
-        position: relative;
-        top: 5px;
-        box-shadow: 0 0 0 $shadowButtonDown, inset 3px 3px 3px$shadowButtonDown;
-    }
+@import "./buttonConfig";
 
 
-
-}
-
-
-
-
-.folha {
-    border: 3px solid $folha;
-    border-radius: 8px;
-    padding: 2px;
-    /*margin-top: 30px;*/
-    margin: 30px auto;
-    width: 92vw;
-    height: 100vh;
-    text-align: justify;
-    background-image: url(../img/folhaBack.jpeg);
-    background-size: cover;
-    background-repeat: repeat;
-    overflow: auto;
-    box-shadow: 5px 5px 10px $preto;
-
-    #lista {
-        /*border: 1px solid $bordaMain;*/
-        width: 100%;
-
-        li {
-            padding: 2px;
-            font-size: 1.6rem;
-            color: $ceu;
-            line-height: 35px;
-            margin-left: 30px;
-
-        }
-    }
-
-}
+@import "./folhaConfig";
