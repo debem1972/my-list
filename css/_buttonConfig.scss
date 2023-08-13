@@ -1,0 +1,37 @@
+.botoes {
+    /*border: 1px solid $preto;*/
+    margin-top: 20px;
+
+    #escrever,
+    #salvar,
+    #buscar {
+        width: 87px;
+        height: 30px;
+        margin-left: 5px;
+        /*outline: none;*/
+        font-size: 15px;
+        cursor: pointer;
+        transition: transform .3s, box-shadow .2s;
+    }
+
+    .btnGreen {
+        background-color: $folha;
+        color: $nuvem;
+        box-shadow: 0 5px 0 $shadowButton;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $shadowButton;
+            color: $nuvem;
+            box-shadow: 0 5px 0 $shadowButtonDown;
+        }
+
+        &:active {
+            position: relative;
+            top: 5px;
+            box-shadow: 0 0 0 $shadowButtonDown, inset 3px 3px 3px$shadowButtonDown;
+        }
+
+    }
+
+}

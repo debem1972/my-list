@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "escribe";
+  src: url("../fontes/Little days.ttf") format("truetype"), url("../fontes/Little Days Alt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .titulo {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px grey;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /*border: 1px solid $bordaMain;*/
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  /*border: 3px solid $oceano;*/
+  background-color: rgb(230, 224, 224);
+  width: 100%;
+  /*height: 100%;*/
+  font-family: "escribe";
+  font-style: normal;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: none;
+  text-align: center;
+}
+
+.titulo {
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+
+#entrada {
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 275px;
+  height: 40px;
+  box-shadow: 2px 2px 8px black;
+  font-size: 18px;
+}
+#entrada::-moz-placeholder {
+  font-weight: bold;
+}
+#entrada::placeholder {
+  font-weight: bold;
+}
+
+.botoes {
+  /*border: 1px solid $preto;*/
+  margin-top: 20px;
+}
+.botoes #escrever,
+.botoes #salvar,
+.botoes #buscar {
+  width: 87px;
+  height: 30px;
+  margin-left: 5px;
+  /*outline: none;*/
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.2s;
+}
+.botoes .btnGreen {
+  background-color: green;
+  color: #fff;
+  box-shadow: 0 5px 0 #006000;
+  border-radius: 5px;
+}
+.botoes .btnGreen:hover {
+  background-color: #006000;
+  color: #fff;
+  box-shadow: 0 5px 0 #003f00;
+}
+.botoes .btnGreen:active {
+  position: relative;
+  top: 5px;
+  box-shadow: 0 0 0 #003f00, inset 3px 3px 3px #003f00;
+}
+
+.folha {
+  border: 3px solid green;
+  border-radius: 8px;
+  padding: 2px;
+  /*margin-top: 30px;*/
+  margin: 30px auto;
+  width: 92vw;
+  height: 100vh;
+  text-align: justify;
+  background-image: url(../img/folhaBack.jpeg);
+  background-size: cover;
+  background-repeat: repeat;
+  overflow: auto;
+  box-shadow: 5px 5px 10px black;
+}
+.folha #lista {
+  /*border: 1px solid $bordaMain;*/
+  width: 100%;
+}
+.folha #lista li {
+  padding: 2px;
+  font-size: 1.6rem;
+  color: rgb(83, 83, 223);
+  line-height: 35px;
+  margin-left: 30px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicativo web para smartPhones!">
+    <meta name="keywords"
+        content="Aplicações web, aplicativos, apps, mobile, lista de compras, lista de tarefas, desenvolvimento web, programação em javaScript">
+    <meta name="author" content="Daniel Lopes Bemfica">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Minha Lista</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="content">
+            <header class="titulo">
+                <h1>Anotações</h1>
+            </header>
+            <input type="text" id="entrada" placeholder="Digite aqui!">
+            <audio id="som1" src="./sound/pencil writing.mp3"></audio>
+            <audio id="som2" src="./sound/zapsplat_fantasy_magic_magical_glissando_002_99214.mp3"></audio>
+            <audio id="som3" src="./sound/zapsplat_fantasy_magic_glissando_ascending_mallet_chime_92874.mp3"></audio>
+            <section class="botoes">
+                <button id="escrever" class="btnGreen">Anotar</button>
+                <button id="salvar" class="btnGreen">Salvar</button>
+                <button id="buscar" class="btnGreen" onclick="busca()"> Busca Lista</button>
+            </section>
+            <section class="folha">
+                <ul id="lista"></ul>
+            </section>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
