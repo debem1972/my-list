@@ -54,6 +54,12 @@
   box-shadow: 2px 2px 8px black;
   font-size: 18px;
 }
+#entrada::-moz-placeholder {
+  font-weight: bold;
+}
+#entrada::placeholder {
+  font-weight: bold;
+}
 
 .botoes {
   /*border: 1px solid $preto;*/

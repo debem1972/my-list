@@ -31,7 +31,7 @@ button.addEventListener('click', function () {
 
 //-------------*--------------------*--------------------------------
 
-//Salva a lista no localStorage após clicar no botão salvar
+//Salva a lista no localStorage após clicar no botão salvar e emite um som
 
 
 const botao2 = document.querySelector('#salvar');  //A variável botao2 seleciona o botao id salvar
@@ -53,11 +53,16 @@ botao2.addEventListener('click', function () {
 
 //-------------*-----------------------*------------------------------------
 
-//Busca a lista salva no localStorage pelo método getItem com a chave 'meusDados', e a envia para a ul id lista.
+//Busca a lista salva no localStorage pelo método getItem com a chave 'meusDados', envia para a ul id lista e emite um som.
 function busca() {
     const meusDados = localStorage.getItem('meusDados');
     document.querySelector('#lista').innerHTML = meusDados;
+
+    const audio3 = document.querySelector('#som3');
+    audio3.play();
 };
+
+
 
 
 

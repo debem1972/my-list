@@ -64,7 +64,13 @@
     height: 40px;
     box-shadow: 2px 2px 8px $preto;
     font-size: 18px;
+
+    &::placeholder {
+        font-weight: bold;
+    }
 }
+
+
 
 @import "./buttonConfig";
 
